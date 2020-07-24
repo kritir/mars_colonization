@@ -1,15 +1,8 @@
-
-<style>
 body {
     padding: 0px;
     margin: 0px;
     overflow: hidden;
-    background-image: marsa surface.jpg;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100% 100%;
 }
-</style>
 
 input {
     cursor: pointer;

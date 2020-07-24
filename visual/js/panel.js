@@ -73,6 +73,28 @@ var Panel = {
                 });
             }
             break;
+            case 'bestfirst_header':
+            allowDiagonal = typeof $('#bestfirst_section ' +
+                                     '.allow_diagonal:checked').val() !== 'undefined';
+            biDirectional = typeof $('#bestfirst_section ' +
+                                     '.bi-directional:checked').val() !== 'undefined';
+            dontCrossCorners = typeof $('#bestfirst_section ' +
+                                     '.dont_cross_corners:checked').val() !=='undefined';
+            heuristic = $('input[name=bestfirst_heuristic]:checked').val();
+            if (biDirectional) {
+                finder = new PF.BiBestFirstFinder({
+                    allowDiagonal: allowDiagonal,
+                    dontCrossCorners: dontCrossCorners,
+                    heuristic: PF.Heuristic[heuristic]
+                });
+            } else {
+                finder = new PF.BestFirstFinder({
+                    allowDiagonal: allowDiagonal,
+                    dontCrossCorners: dontCrossCorners,
+                    heuristic: PF.Heuristic[heuristic]
+                });
+            }
+            break;
         }
 
         return finder;

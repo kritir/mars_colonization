@@ -75,3 +75,12 @@ pathTests({
     finder: new PF.BiDijkstraFinder(),
     optimal: true
 });
+pathTests({
+    name: 'BestFirst',
+    finder: new PF.BestFirstFinder(),
+    optimal: false
+}, {
+    name: 'BiBestFirst',
+    finder: new PF.BiBestFirstFinder(),
+    optimal: false
+});

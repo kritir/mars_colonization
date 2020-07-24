@@ -5,8 +5,9 @@ module.exports = {
     'Util'                      : require('./core/Util'),
     'DiagonalMovement'          : require('./core/DiagonalMovement'),
     'Heuristic'                 : require('./core/Heuristic'),
-		'BreadthFirstFinder'        : require('./finders/BreadthFirstFinder'),
+    'BestFirstFinder'           : require('./finders/BestFirstFinder'),
+    'BreadthFirstFinder'        : require('./finders/BreadthFirstFinder'),
     'DijkstraFinder'            : require('./finders/DijkstraFinder'),
-		'BiBreadthFirstFinder'      : require('./finders/BiBreadthFirstFinder'),
+    'BiBreadthFirstFinder'      : require('./finders/BiBreadthFirstFinder'),
     'BiDijkstraFinder'          : require('./finders/BiDijkstraFinder'),
 };
